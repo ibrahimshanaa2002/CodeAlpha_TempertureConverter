@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="website icon" type="png" href="weather-icon.png">
+    <link rel="stylesheet" type="text/css" href="tempertureConverter.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="tempertureConverter.css" />
+</head>
+
+<body>
+    <div class="containerr">
+        <div class="input-container">
+            <h1>Temperature Converter</h1>
+
+            <label for="inputScale">Select Input Scale:</label>
+            <select id="inputScale">
+                <option value="celsius">Celsius | °C</option>
+                <option value="fahrenheit">Fahrenheit | °F</option>
+                <option value="kelvin">Kelvin | K</option>
+            </select>
+
+            <br />
+
+            <label for="temperature">Enter Temperature:</label>
+            <input type="number" id="temperature" placeholder="Enter The Temperature ..." />
+
+            <br />
+
+            <label for="outputScale">Select Output Scale:</label>
+            <select id="outputScale">
+                <option value="celsius">Celsius | °C</option>
+                <option value="fahrenheit">Fahrenheit | °F</option>
+                <option value="kelvin">Kelvin | K</option>
+            </select>
+
+            <br />
+
+            <button onclick="convertTemperature()">Convert</button>
+        </div>
+
+        <div class="result-container">
+            <div class="icons">
+                <i class="fa-solid fa-cloud fa-2xl" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-sun fa-2xl" style="color: #FF5349;"></i>
+                <i class="fa-solid fa-bolt fa-2xl" style="color: #ffd500;"></i>
+                <i class="fa-solid fa-wind fa-2xl" style="color: #ec9e69;"></i>
+            </div>
+            <div class="result-icon">
+                <i class="fa-solid fa-temperature-quarter fa-2xl" style="color: #ffffff;"></i>
+                <p>Result: <span id="result"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="tempertureConverter.js"></script>
+</body>
+
+</html>
